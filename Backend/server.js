@@ -7,9 +7,9 @@ const app = express();
 app.use(express.json());
 
 // Sync database (creates table automatically)
-sequelize.sync().then(() => {
-  console.log('Database & tables created!');
-});
+//sequelize.sync().then(() => {
+  //console.log('Database & tables created!');
+//});
 
 app.get("/", (req, res) => {
   res.send("Hello World");
