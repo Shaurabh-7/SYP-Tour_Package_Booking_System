@@ -22,11 +22,10 @@ async function testConnection() {
   try {
     await sequelize.authenticate();
     console.log('Connected to MySQL with Sequelize');
-    
   } catch (err) {
     console.error('Connection Error:', err);
   }
 }
 
-testConnection();
+export { testConnection };
 export default sequelize;

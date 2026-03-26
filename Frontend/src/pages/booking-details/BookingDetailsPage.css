@@ -1,0 +1,144 @@
+.booking-details-page {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 48px 24px 72px;
+}
+
+.booking-detail-card {
+  padding: 32px;
+  border-radius: 30px;
+  background: #ffffff;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+}
+
+.booking-detail-card h1 {
+  color: #102033;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.booking-detail-copy {
+  margin: 16px 0 24px;
+  color: #526273;
+  line-height: 1.8;
+}
+
+.booking-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.booking-detail-grid div {
+  padding: 18px;
+  border-radius: 18px;
+  background: #f8fafc;
+}
+
+.booking-detail-grid span {
+  display: block;
+  margin-bottom: 8px;
+  color: #b45309;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+}
+
+.booking-detail-grid strong {
+  color: #102033;
+}
+
+.booking-detail-actions {
+  margin-top: 24px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.booking-detail-actions a {
+  padding: 12px 16px;
+  border-radius: 14px;
+  background: #fff7ed;
+  color: #c2410c;
+  font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  .booking-detail-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* eSewa Payment */
+.payment-action {
+  margin-top: 28px;
+  text-align: center;
+  padding: 24px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #f0fdf4, #ecfdf5);
+  border: 1px solid #bbf7d0;
+}
+
+.btn-esewa {
+  padding: 14px 36px;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(135deg, #60b946, #4a9e35);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(96, 185, 70, 0.3);
+}
+
+.btn-esewa:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(96, 185, 70, 0.4);
+}
+
+.btn-esewa:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.payment-note {
+  margin-top: 12px;
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+.payment-success-banner {
+  margin-top: 24px;
+  padding: 18px 24px;
+  border-radius: 16px;
+  background: #dcfce7;
+  border: 1px solid #86efac;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.payment-success-banner span {
+  font-size: 1.5rem;
+}
+
+.payment-success-banner p {
+  color: #166534;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.payment-status.paid {
+  color: #166534;
+}
+
+.payment-status.pending {
+  color: #92400e;
+}
+
+.payment-status.failed {
+  color: #991b1b;
+}
