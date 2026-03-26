@@ -1,0 +1,169 @@
+.register-page {
+  min-height: calc(100vh - 80px);
+  padding: 0;
+  background: #ffffff;
+}
+
+.register-shell {
+  max-width: 100%;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  min-height: calc(100vh - 80px);
+  align-items: stretch;
+}
+
+.register-image-panel {
+  position: relative;
+  background-image: url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80'); /* Beautiful Nepal lake/mountain */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  padding: 60px;
+}
+
+.register-image-panel::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 60%);
+}
+
+.register-image-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  max-width: 500px;
+}
+
+.register-image-content h1 {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 800;
+  margin-bottom: 16px;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.register-image-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #cbd5e1;
+}
+
+.register-card-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: radial-gradient(circle at top right, rgba(249, 115, 22, 0.04), transparent 50%), #ffffff;
+}
+
+.register-card {
+  width: 100%;
+  max-width: 440px;
+}
+
+.register-card-top {
+  margin-bottom: 32px;
+}
+
+.register-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+
+.register-subtitle {
+  font-size: 1rem;
+  color: #64748b;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-form .input-field {
+  margin-bottom: 20px;
+}
+
+.register-form textarea {
+  width: 100%;
+  resize: vertical;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: inherit;
+  color: #0f172a;
+  background: #ffffff;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.register-form textarea:focus {
+  border-color: #ea580c;
+  box-shadow: 0 0 0 4px rgba(234, 88, 12, 0.1);
+}
+
+.btn-register-submit {
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 12px;
+  background: #ea580c;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(234, 88, 12, 0.3);
+}
+
+.btn-register-submit:hover:not(:disabled) {
+  background: #c2410c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(234, 88, 12, 0.4);
+}
+
+.btn-register-submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.register-footer {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #64748b;
+  margin-top: 30px;
+}
+
+.register-footer a {
+  color: #ea580c;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.register-footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 980px) {
+  .register-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .register-image-panel {
+    display: none; /* Hide image on mobile for simpler auth flow */
+  }
+
+  .register-card-wrapper {
+    padding: 40px 24px;
+    align-items: flex-start;
+    padding-top: 60px;
+  }
+}

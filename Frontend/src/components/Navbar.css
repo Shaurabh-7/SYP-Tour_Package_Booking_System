@@ -1,0 +1,106 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  background-color: rgba(255, 255, 255, 0.88);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  backdrop-filter: blur(16px);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.navbar-logo a {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+/* Logo styles */
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-icon {
+  width: 32px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+.logo-text {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 1px;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.logo-nepal {
+  color: #1a1a1a;
+}
+
+.logo-yatra {
+  color: #e67e22;
+  font-style: italic;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.navbar-links .nav-link {
+  font-size: 14px;
+  color: #475569;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.navbar-links .nav-link:hover {
+  color: #e67e22;
+}
+
+.navbar-links .nav-link.active {
+  color: #ea580c;
+  font-weight: 700;
+}
+
+.btn-register {
+  background-color: #e67e22;
+  color: #fff !important;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-weight: 600 !important;
+  border: none;
+}
+
+.btn-register:hover {
+  background-color: #d35400;
+}
+
+.navbar-user {
+  font-size: 14px;
+  color: #0f172a;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 16px 18px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .navbar-links {
+    justify-content: flex-start;
+  }
+}

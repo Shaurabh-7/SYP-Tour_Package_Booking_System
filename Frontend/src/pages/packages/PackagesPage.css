@@ -1,0 +1,86 @@
+.packages-page {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 48px 24px 72px;
+}
+
+.packages-hero {
+  margin-bottom: 26px;
+}
+
+.packages-hero h1 {
+  font-size: clamp(2.4rem, 4vw, 4.2rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: #102033;
+  margin-bottom: 14px;
+}
+
+.packages-hero p:last-child {
+  color: #526273;
+  max-width: 700px;
+  line-height: 1.8;
+}
+
+.packages-toolbar {
+  margin-bottom: 24px;
+}
+
+.packages-toolbar input {
+  width: 100%;
+  padding: 16px 18px;
+  border-radius: 20px;
+  border: 1px solid rgba(148, 163, 184, 0.26);
+  background: rgba(255, 255, 255, 0.92);
+  font-size: 0.98rem;
+}
+
+.packages-grid-wrap {
+  min-height: 280px;
+}
+
+.custom-itinerary-banner {
+  max-width: 1180px;
+  margin: 60px auto 40px;
+  padding: 0 24px;
+}
+
+.custom-banner-content {
+  background: linear-gradient(135deg, #fff7ed, #ffedd5);
+  border: 1px solid #fed7aa;
+  border-radius: 24px;
+  padding: 50px 40px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(249, 115, 22, 0.08);
+}
+
+.custom-banner-content h2 {
+  color: #9a3412;
+  font-size: 2rem;
+  margin-bottom: 12px;
+  font-weight: 800;
+}
+
+.custom-banner-content p {
+  color: #c2410c;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.btn-custom-plan {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #ea580c;
+  color: white;
+  border-radius: 50px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-custom-plan:hover {
+  background: #c2410c;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(234, 88, 12, 0.3);
+}

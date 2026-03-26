@@ -1,0 +1,139 @@
+.about-hero {
+  padding: 80px 24px;
+  background-color: #ffffff;
+  background-image: radial-gradient(circle at top right, rgba(249, 115, 22, 0.15), transparent 50%);
+  text-align: center;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.about-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-hero-content h1 {
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  color: #0f172a;
+  margin-bottom: 20px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.about-hero-content p {
+  font-size: 1.15rem;
+  color: #64748b;
+  line-height: 1.7;
+}
+
+.about-vision.flex-split {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 80px 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.vision-text h2 {
+  font-size: 2.2rem;
+  color: #0f172a;
+  margin-bottom: 24px;
+  font-weight: 800;
+}
+
+.vision-text p {
+  font-size: 1.05rem;
+  color: #475569;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.vision-image img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.about-values {
+  background: #ffffff;
+  padding: 80px 24px;
+}
+
+.values-grid {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.value-card {
+  padding: 40px;
+  background: #f8fafc;
+  border-radius: 20px;
+  border: 1px solid #f1f5f9;
+  transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.value-card h3 {
+  font-size: 1.4rem;
+  color: #ea580c;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.value-card p {
+  color: #64748b;
+  line-height: 1.7;
+}
+
+.about-cta {
+  text-align: center;
+  padding: 100px 24px;
+  background: #0f172a;
+  color: #fff;
+}
+
+.about-cta h2 {
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.about-cta p {
+  font-size: 1.1rem;
+  margin-bottom: 32px;
+  opacity: 0.8;
+}
+
+.btn-cta {
+  display: inline-block;
+  padding: 16px 32px;
+  background: #ea580c;
+  color: #fff;
+  border-radius: 50px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(234, 88, 12, 0.3);
+  text-decoration: none;
+}
+
+.btn-cta:hover {
+  background: #c2410c;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(234, 88, 12, 0.4);
+}
+
+@media (max-width: 900px) {
+
+  .about-vision.flex-split,
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}

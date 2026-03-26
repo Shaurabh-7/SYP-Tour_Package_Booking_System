@@ -1,10 +1,14 @@
 import jwt from 'jsonwebtoken';
-import User from '../models/User.js';
+import User from '../models/user.js';
 
 const authenticateToken = async (req, res, next) => {
   try {
-    const token = req.cookies.token;
-    
+    let token = req.cookies.token;
+
+    if (!token && req.headers.authorization && req.headers.authorization.startsWith('Bearer')) {
+      token = req.headers.authorization.split(' ')[1];
+    }
+
     if (!token) {
       return res.status(401).json({
         success: false,
@@ -13,7 +17,7 @@ const authenticateToken = async (req, res, next) => {
     }
 
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    
+
     const user = await User.findByPk(decoded.id, {
       attributes: { exclude: ['password'] }
     });
@@ -44,4 +48,32 @@ const authenticateToken = async (req, res, next) => {
   }
 };
 
-export { authenticateToken };
+const authorizeRoles = (...roles) => {
+  return (req, res, next) => {
+    if (!roles.includes(req.user.role)) {
+      return res.status(403).json({
+        success: false,
+        message: "Access denied: Insufficient permissions"
+      });
+    }
+    next();
+  };
+};
+
+const optionalAuthenticate = async (req, res, next) => {
+  try {
+    let token = req.cookies.token;
+    if (!token && req.headers.authorization?.startsWith('Bearer')) {
+      token = req.headers.authorization.split(' ')[1];
+    }
+    if (!token) return next();
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    const user = await User.findByPk(decoded.id, { attributes: { exclude: ['password'] } });
+    if (user && user.isActive) req.user = user;
+    next();
+  } catch {
+    next();
+  }
+};
+
+export { authenticateToken, optionalAuthenticate, authorizeRoles };

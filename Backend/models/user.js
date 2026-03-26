@@ -1,7 +1,7 @@
 import { DataTypes } from "sequelize";
-import bcrypt from "bcrypt";
 import sequelize from "../config/db.js";
 
+// Roles: admin (controls system), agency (posts tour packages), customer (books tours)
 const User = sequelize.define(
   "User",
   {
@@ -29,8 +29,8 @@ const User = sequelize.define(
     },
 
     role: {
-      type: DataTypes.ENUM("admin", "traveler", "agency"),
-      defaultValue: "traveler",
+      type: DataTypes.ENUM("admin", "agency", "customer"),
+      defaultValue: "customer",
     },
 
     phone: {
@@ -47,22 +47,10 @@ const User = sequelize.define(
       type: DataTypes.BOOLEAN,
       defaultValue: true,
     },
-
-    createdAt: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
-    },
-
-    updatedAt: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
-    },
   },
   {
     tableName: "users",
-    timestamps: false, 
+    timestamps: true,
   }
 );
 
